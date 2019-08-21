@@ -4,18 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
+import { StartPageRoutingModule } from './start-routing.module';
 
-import { MessagesPage } from './messages.page';
+import { StartPage } from './start.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: MessagesPage,
+    component: StartPage,
   },
 ];
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, RouterModule.forChild(routes)],
-  declarations: [MessagesPage],
+  imports: [CommonModule, FormsModule, IonicModule, RouterModule.forChild(routes), StartPageRoutingModule],
+  declarations: [StartPage],
 })
-export class MessagesPageModule {}
+export class StartPageModule {}
